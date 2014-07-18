@@ -6,7 +6,6 @@ ruby '2.1.1'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
 group :development do
-  gem 'rspec-rails', '2.13.1'
   gem 'rb-readline'
   gem 'guard-rspec', '2.5.0'
 end
@@ -20,6 +19,7 @@ end
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
+  gem 'rspec-rails', '2.13.1'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.5.2'
