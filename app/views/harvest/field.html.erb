@@ -1,0 +1,15 @@
+<h1>Farm Harvest | Field</h1>
+
+<h3>Add a Crop</h3>
+<%= form_for @crop do |f| %>
+    <%= f.label :name, "Crop name" %>
+    <%= f.text_field :name %><br>
+    <%= f.label :comments %>
+    <%= f.text_field :comments %><br>
+    <%= f.label :quantity %>
+    <%= f.text_field :quantity %><br>
+    <%= f.label :unit_type %>
+    <%= f.text_field :unit_type %><br>
+
+    <%= f.submit "Record info" %>
+<% end %>

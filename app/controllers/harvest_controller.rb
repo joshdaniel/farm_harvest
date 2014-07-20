@@ -9,6 +9,9 @@ class HarvestController < ApplicationController
   end
 
   def availability
+  end
 
+  def field
+    @crop = Crop.new
   end
 end

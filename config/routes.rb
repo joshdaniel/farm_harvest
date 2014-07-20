@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  root 'harvest#home'
+
   get 'harvest/home'
-
   get 'harvest/help'
-
   get 'harvest/about'
-
   get 'harvest/availability'
+  get 'harvest/field'
+
+  resources :crops
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

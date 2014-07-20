@@ -10,6 +10,31 @@ describe "Harvests" do
     end
   end
 
+  describe "Field entry pages" do
+    it "should have entry form" do
+      visit '/harvest/field'
+      expect(page).to have_content('Crop name')
+      expect(page).to have_content('Comments')
+      expect(page).to have_content('Quantity')
+      expect(page).to have_content('Unit type')
+      expect(page).to have_button('Record info')
+    end
+
+    it "should enter information into database" do
+      visit '/harvest/field'
+      fill_in "Crop name", with: "Broccoli"
+      fill_in "Quantity", with: "30"
+      fill_in "Unit type", with: "ct"
+      click_button "Record info"
+      expect(Crop.count).to equal(1)
+      crop = Crop.find(1)
+      expect(crop.name).to eq("Broccoli")
+      expect(crop.quantity).to eq(30)
+      expect(crop.unit_type).to eq("ct")
+      expect(crop.comments).to eq("")
+    end
+  end
+
   describe "Harvest Availability page" do
     it "should have the content 'Farm Harvest Availability'" do
       visit '/harvest/availability'
