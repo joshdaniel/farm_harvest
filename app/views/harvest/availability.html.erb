@@ -1,2 +1,56 @@
+<% crops = Crop.all %>
+
 <h1>Farm Harvest Availability</h1>
-<p>Find me in app/views/harvest/availability.html.erb</p>
+<table>
+  <tr>
+    <th>
+      Name
+    </th>
+    <th>
+      Comments
+    </th>
+    <th>
+      Quantity
+    </th>
+    <th>
+      Unit type
+    </th>
+    <th>
+      Time
+    </th>
+  </tr>
+  <% crops.each do |crop| %>
+      <tr>
+        <td>
+          <%= crop.name %>
+        </td>
+        <td>
+          <%= crop.comments %>
+        </td>
+        <td>
+          <%= crop.quantity %>
+        </td>
+        <td>
+          <%= crop.unit_type %>
+        </td>
+        <td>
+          <%= crop.created_at %>
+        </td>
+      </tr>
+  <% end %>
+</table>
+<br>
+<br>
+
+<h3>Excel-friendly</h3>
+<% crops.column_names.each do |c| %>
+  <%= c %>,
+<% end %>
+<br>
+<% crops.each do |crop| %>
+  <% crop.attributes.each do |key, value| %>
+    <%= value %>,
+  <% end %>
+  <br>
+<% end %>
+
