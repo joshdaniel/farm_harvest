@@ -7,4 +7,8 @@ class HarvestController < ApplicationController
 
   def about
   end
+
+  def availability
+
+  end
 end
