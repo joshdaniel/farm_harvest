@@ -11,6 +11,19 @@ describe "Harvests" do
   end
 
   describe "Field entry pages" do
+    it "should list crops" do
+      visit '/harvest/fields'
+      expect(page).to have_content('Strawberries')
+      expect(page).to have_content('Broccoli')
+      expect(page).to have_content('Early Girl')
+    end
+
+    it "should populate crop name on entry form after click" do
+      visit '/harvest/fields'
+      click_link "Broccoli"
+      expect(page).to have_content("Broccoli")
+    end
+
     it "should have entry form" do
       visit '/harvest/field'
       expect(page).to have_content('Crop name')

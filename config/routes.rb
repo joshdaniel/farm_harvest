@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'harvest/about'
   get 'harvest/availability'
   get 'harvest/field'
+  get 'harvest/fields'
 
   resources :crops
 

@@ -14,4 +14,8 @@ class HarvestController < ApplicationController
   def field
     @crop = Crop.new
   end
+
+  def fields
+    @crop_types = ["Strawberries", "Early Girl", "Cucumbers", "Broccoli"]
+  end
 end

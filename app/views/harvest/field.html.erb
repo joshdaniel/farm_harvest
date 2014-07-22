@@ -2,8 +2,13 @@
 
 <h3>Add a Crop</h3>
 <%= form_for @crop do |f| %>
-    <%= f.label :name, "Crop name" %>
-    <%= f.text_field :name %><br>
+    <% if params[:crop_name] %>
+      <b><%= params[:crop_name] %></b>
+      <%= f.hidden_field :name, :value => params[:crop_name] %><br>
+    <% else %>
+      <%= f.label :name, "Crop name" %>
+      <%= f.text_field :name %><br>
+    <% end %>
     <%= f.label :comments %>
     <%= f.text_field :comments %><br>
     <%= f.label :quantity %>
