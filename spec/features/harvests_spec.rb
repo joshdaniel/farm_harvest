@@ -52,6 +52,17 @@ describe "Harvests" do
       expect(crop.unit_type).to eq("ct")
       expect(crop.comments).to eq("")
     end
+
+    it "should redirect to fields page with a success message" do
+      visit '/harvest/field'
+      fill_in "Crop name", with: "Broccoli"
+      fill_in "Quantity", with: "30"
+      fill_in "Unit type", with: "ct"
+      click_button "Record info"
+      expect(page).to have_content('Broccoli')
+      expect(page).to have_content('Strawberries')
+      expect(page).to have_content('Recorded Broccoli')
+    end
   end
 
   describe "Harvest Availability page" do
