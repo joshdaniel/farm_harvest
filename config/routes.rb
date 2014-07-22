@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'harvest#home'
+  root 'harvest#fields'
 
   get 'harvest/home'
   get 'harvest/help'
