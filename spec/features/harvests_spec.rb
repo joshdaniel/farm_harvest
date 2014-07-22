@@ -8,6 +8,12 @@ describe "Harvests" do
       visit '/harvest/home'
       expect(page).to have_content('Farm Harvest')
     end
+
+    it "should have header links to fields page and availability (office) page" do
+      visit '/harvest/home'
+      expect(page).to have_link('Field', harvest_fields_path)
+      expect(page).to have_link('Availability', harvest_availability_path)
+    end
   end
 
   describe "Field entry pages" do
