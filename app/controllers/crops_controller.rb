@@ -5,9 +5,9 @@ class CropsController < ApplicationController
   def create
     @crop= Crop.new(crop_params)
     if @crop.save
-      redirect_to harvest_field_path
+      redirect_to harvest_fields_path
     else
-      redirect_to_harvest_field_path
+      redirect_to_harvest_fields_path
     end
   end
 
