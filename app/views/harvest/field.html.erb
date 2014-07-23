@@ -1,20 +1,25 @@
 <h1>Farm Harvest | Field</h1>
 
-<h3>Add a Crop</h3>
 <%= form_for @crop do |f| %>
-    <% if params[:crop_name] %>
-      <b><%= params[:crop_name] %></b>
-      <%= f.hidden_field :name, :value => params[:crop_name] %><br>
-    <% else %>
-      <%= f.label :name, "Crop name" %>
-      <%= f.text_field :name %><br>
-    <% end %>
-    <%= f.label :comments %>
-    <%= f.text_field :comments %><br>
-    <%= f.label :quantity %>
-    <%= f.text_field :quantity %><br>
-    <%= f.label :unit_type %>
-    <%= f.text_field :unit_type %><br>
+<table class="field">
+    <tr class="field">
+      <td class="field">
+        <% if params[:crop_name] %>
+          <b><%= params[:crop_name] %></b>
+          <%= f.hidden_field :name, :value => params[:crop_name] %><br>
+        <% else %>
+          <%= f.label :name, "Crop name" %>
+          <%= f.text_field :name %><br>
+        <% end %>
+        <%= f.label :comments %>
+        <%= f.text_field :comments %><br>
+        <%= f.label :quantity %>
+        <%= f.text_field :quantity %><br>
+        <%= f.label :unit_type %>
+        <%= f.text_field :unit_type %><br>
 
-    <%= f.submit "Record info" %>
+        <%= f.submit "Record info" %>
+      </td>
+    </tr>
+</table>
 <% end %>

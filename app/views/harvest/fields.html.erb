@@ -1,5 +1,11 @@
 <h1>Farm Harvest | Fields</h1>
 
+<table class="fields">
 <% @crop_types.each do |crop| %>
-  <%= link_to crop, harvest_field_path(:crop_name => crop) %><br>
+  <tr class="fields">
+    <td class="fields">
+      <b><%= link_to crop, harvest_field_path(:crop_name => crop) %></b>
+    </td>
+  </tr>
 <% end %>
+</table>

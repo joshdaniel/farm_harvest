@@ -8,3 +8,32 @@ table,th,td {
 table {
   width:800px
 }
+tr .fields, td .fields {
+  line-height:90px;
+  font-size:250%;
+  background-color: green;
+  row-padding: 15px;
+}
+
+table.fields {
+  width:100%
+}
+
+tr .field, td .field {
+  line-height:90px;
+  font-size:250%;
+  background-color: green;
+  row-padding: 15px;
+}
+
+table.field {
+  width:100%
+}
+
+input {
+  font-size: 100%
+}
+input[type=submit] {
+  width: 10em;
+  height: 5em;
+}
