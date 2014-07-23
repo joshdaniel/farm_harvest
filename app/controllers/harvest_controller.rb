@@ -31,6 +31,8 @@ class HarvestController < ApplicationController
                    'Mixed Medley Tomato',
                    'Sungold',
                    'Sweet 100',
+                   'Strawberries',
+                   'Broccoli',
                    'Carrots',
                    'Beets']
   end
