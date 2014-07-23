@@ -16,6 +16,22 @@ class HarvestController < ApplicationController
   end
 
   def fields
-    @crop_types = ["Strawberries", "Early Girl", "Cucumbers", "Broccoli"]
+    @crop_types = ['Armenian Cucumber',
+                   'Pickling Cukes',
+                   'Slicing Cucumbers',
+                   'Mixed Summer Squash',
+                   'Padron Peppers',
+                   'Picante Padron',
+                   'French Fingerling Potatoes',
+                   'Russian Banana Potatoes',
+                   'Yukon A/B mix',
+                   'Early Girl',
+                   'Lemon Boy',
+                   'Orange Blossom',
+                   'Mixed Medley Tomato',
+                   'Sungold',
+                   'Sweet 100',
+                   'Carrots',
+                   'Beets']
   end
 end
